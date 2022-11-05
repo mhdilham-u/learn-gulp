@@ -2,11 +2,11 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 
 function buildFiles() {
-  return src("sass/**/*.scss").pipe(sass()).pipe(dest("css"));
+  return src("assets/sass/**/*.scss").pipe(sass()).pipe(dest("assets/css"));
 }
 
 function watchFiles() {
-  watch(["sass/**/*.scss"], buildFiles);
+  watch(["assets/sass/**/*.scss"], buildFiles);
 }
 
 exports.default = series(buildFiles, watchFiles);
