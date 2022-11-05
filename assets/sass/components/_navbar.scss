@@ -1,0 +1,43 @@
+#navbar {
+  height: 90px;
+
+  .navbar- {
+    &brand {
+      font-family: "Righteous", cursive;
+      font-size: 2rem;
+    }
+
+    &nav {
+      column-gap: 40px;
+    }
+
+    &collapse {
+      @include sm {
+        background-color: aqua !important;
+        margin-top: 5rem !important;
+      }
+    }
+  }
+  .nav- {
+    &link {
+      font-weight: 600;
+      padding: 0 0 8px 0;
+      &:hover {
+        border-bottom: 2px solid #fc67fa;
+      }
+
+      &.active {
+        border-bottom: 2px solid #fc67fa;
+      }
+    }
+    &item {
+      column-gap: 70px;
+    }
+    &button {
+      @include button-basic;
+      background: linear-gradient(to right, #fc67fa, #f4c4f3);
+
+      color: white;
+    }
+  }
+}
